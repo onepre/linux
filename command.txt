@@ -1,4 +1,4 @@
-网上同步时间
+﻿﻿网上同步时间
 
     1.  安装ntpdate工具
 
@@ -19,3 +19,40 @@ cn.pool.ntp.org是位于中国的公共NTP服务器，用来同步你的时间(�
 ip  ifconfig wlp3s0 | grep "inet 地址" | awk '{ print $2}' | awk -F: '{print $2}'
 
 
+搜索想要的软件包 
+apt-cache search dtc
+
+
+查询两个ip是否相通
+curl http:://192.168.0.10
+
+
+挂载虚拟内存
+1.dd  if = /dev/zero  of = swap.img  bs = 1M  count=1024
+2.mkswap swap.img
+3.swapon swap.img
+
+查看.so 文件的架构
+readelf -h ***.so
+
+文件/文件系统的详细信息显示
+stat filename
+
+ros urdf 文件详细介绍
+https://blog.csdn.net/sunanger/article/details/52933154
+
+linux nc 命令详解【扫描端口、聊天工具、传输文件】
+https://blog.csdn.net/caoshuming_500/article/details/23755713
+
+
+gtest Ros测试工具
+http://ysonggit.github.io/coding/2014/12/19/use-gtest-in-ros-program.html
+
+ros dynamic_reconfigure
+https://blog.csdn.net/CSDNhuaong/article/details/78607184
+
+#在当面目录下查找所有普通文件，并用grep命令在搜索到的文件中查找hostname这个词
+find . -type f -print | xargs grep "hostname"
+
+#在当前目录查找名字包含“hostname”的普通文件
+find . -type f -name "hostname"
